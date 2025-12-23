@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
       
       - name: Install vsce
         run: npm install -g @vscode/vsce
@@ -53,6 +52,7 @@ jobs:
           path: |
             **/*.vsix
           retention-days: 30
+
 
 
 
