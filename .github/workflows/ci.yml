@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  test:
+    name: Test and Package Themes
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        theme:
+          - baseline-theme
+          - turbo-theme
+        # Add more themes here as you create them
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
+      
+      - name: Validate theme structure
+        working-directory: ${{ matrix.theme }}
+        run: |
+          if [ ! -f "package.json" ]; then
+            echo "❌ package.json not found"
+            exit 1
+          fi
+          if [ ! -d "themes" ]; then
+            echo "❌ themes directory not found"
+            exit 1
+          fi
+          echo "✅ Theme structure validated"
+      
+      - name: Check package.json
+        working-directory: ${{ matrix.theme }}
+        run: |
+          node -e "const pkg = require('./package.json'); \
+            if (!pkg.name || !pkg.displayName || !pkg.version) { \
+              console.error('❌ Missing required fields in package.json'); \
+              process.exit(1); \
+            }"
+          echo "✅ package.json is valid"
+      
+      - name: Package theme
+        working-directory: ${{ matrix.theme }}
+        run: |
+          vsce package --no-yarn
+          echo "✅ Theme packaged successfully"
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.theme }}-vsix
+          path: ${{ matrix.theme }}/*.vsix
+          retention-days: 7
+

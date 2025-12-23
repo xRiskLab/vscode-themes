@@ -1,0 +1,95 @@
+{
+  "name": "turbo-theme",
+  "displayName": "TurboGPT Theme",
+  "description": "Retro GPT 3.5 inspired theme with elegant teal/cyan tones and warm accents - optimized for JSON, TypeScript, and YAML",
+  "version": "1.0.0",
+  "publisher": "xRiskLab",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "turbo",
+    "gpt",
+    "gpt-3.5",
+    "retro",
+    "teal",
+    "cyan",
+    "salmon",
+    "tomato",
+    "json",
+    "typescript",
+    "yaml",
+    "theme",
+    "dark",
+    "light"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Turbo Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/turbo-dark.json"
+      },
+      {
+        "label": "Turbo Light",
+        "uiTheme": "vs",
+        "path": "./themes/turbo-light.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xRiskLab/vscode-themes"
+  },
+  "license": "MIT",
+  "extensionKind": [
+    "ui"
+  ],
+  "galleryBanner": {
+    "color": "#1a1f2e",
+    "theme": "dark"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+name: Package Themes
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  package:
+    name: Package All Themes
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
+      
+      - name: Find all themes
+        id: find-themes
+        run: |
+          THEMES=$(find . -maxdepth 2 -name "package.json" -not -path "./node_modules/*" -not -path "./.git/*" | sed 's|/package.json||' | sed 's|^\./||' | grep -v "^$$")
+          echo "themes<<EOF" >> $GITHUB_OUTPUT
+          echo "$THEMES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "Found themes:"
+          echo "$THEMES"
+      
+      - name: Package all themes
+        run: |
+          echo "${{ steps.find-themes.outputs.themes }}" | while read theme; do
+            if [ -n "$theme" ] && [ -d "$theme" ]; then
+              echo ""
+              echo "Packaging $theme..."
+              cd "$theme"
+              vsce package --no-yarn || echo "⚠️  Failed to package $theme"
+              cd - > /dev/null
+            fi
+          done
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-themes-vsix
+          path: |
+            **/*.vsix
+          retention-days: 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
