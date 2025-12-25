@@ -2,7 +2,7 @@
   "name": "turbo-theme",
   "displayName": "TurboGPT Theme",
   "description": "Retro GPT 3.5 inspired theme with elegant teal/cyan tones and warm accents - optimized for JSON, TypeScript, and YAML",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "xRiskLab",
   "icon": "icon.png",
   "engines": {

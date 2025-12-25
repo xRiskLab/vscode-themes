@@ -2,6 +2,19 @@
 
 All notable changes to the Turbo Theme extension will be documented in this file.
 
+## [1.0.2] - 2025-01-23
+
+### Improved
+- Refined Turbo Light theme UI colors for a softer, more cohesive appearance
+- Aligned sidebar and header backgrounds with main editor window for visual consistency
+- Updated borders and list backgrounds to match editor styling
+
+## [1.0.1] - 2025-01-23
+
+### Fixed
+- Updated import/export keywords to use new palette blue (#69A4E3)
+- Updated icon
+
 ## [1.0.0] - 2025-01-23
 
 ### Added

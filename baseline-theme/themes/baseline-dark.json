@@ -393,6 +393,96 @@
       }
     },
     {
+      "name": "TypeScript/JavaScript Import Member Access - Orange (must override blue variable rule)",
+      "scope": [
+        "meta.import.tsx meta.member-access.tsx variable.other.readwrite.tsx",
+        "meta.import.tsx meta.member-access.tsx entity.name.type.module.tsx",
+        "meta.import.ts meta.member-access.ts variable.other.readwrite.ts",
+        "meta.import.ts meta.member-access.ts entity.name.type.module.ts",
+        "meta.import.jsx meta.member-access.jsx variable.other.readwrite.jsx",
+        "meta.import.jsx meta.member-access.jsx entity.name.type.module.jsx",
+        "meta.import.js meta.member-access.js variable.other.readwrite.js",
+        "meta.import.js meta.member-access.js entity.name.type.module.js",
+        "meta.import.tsx meta.member-access.tsx",
+        "meta.import.ts meta.member-access.ts",
+        "meta.import.jsx meta.member-access.jsx",
+        "meta.import.js meta.member-access.js"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "TypeScript/JavaScript Module/Namespace/Imports - Blue (must come after Variables)",
+      "scope": [
+        "entity.name.type.module.ts",
+        "entity.name.type.module.tsx",
+        "entity.name.type.module.js",
+        "entity.name.type.module.jsx",
+        "entity.name.namespace.ts",
+        "entity.name.namespace.tsx",
+        "entity.name.namespace.js",
+        "entity.name.namespace.jsx",
+        "meta.import.ts entity.name.type.module.ts",
+        "meta.import.tsx entity.name.type.module.tsx",
+        "meta.import.js entity.name.type.module.js",
+        "meta.import.jsx entity.name.type.module.jsx",
+        "meta.import.ts entity.name.namespace.ts",
+        "meta.import.tsx entity.name.namespace.tsx",
+        "meta.import.js entity.name.namespace.js",
+        "meta.import.jsx entity.name.namespace.jsx",
+        "meta.import.ts entity.name.type.class.ts",
+        "meta.import.tsx entity.name.type.class.tsx",
+        "meta.import.ts entity.name.function.ts",
+        "meta.import.tsx entity.name.function.tsx",
+        "meta.import.js entity.name.function.js",
+        "meta.import.jsx entity.name.function.jsx",
+        "meta.import.ts variable.other.readwrite.alias.ts",
+        "meta.import.tsx variable.other.readwrite.alias.tsx",
+        "meta.import.js variable.other.readwrite.alias.js",
+        "meta.import.jsx variable.other.readwrite.alias.jsx",
+        "variable.other.readwrite.alias.ts",
+        "variable.other.readwrite.alias.tsx",
+        "variable.other.readwrite.alias.js",
+        "variable.other.readwrite.alias.jsx",
+        "meta.import.ts variable",
+        "meta.import.tsx variable",
+        "meta.import.js variable",
+        "meta.import.jsx variable",
+        "source.ts meta.import.ts variable",
+        "source.tsx meta.import.tsx variable",
+        "source.js meta.import.js variable",
+        "source.jsx meta.import.jsx variable",
+        "source.ts meta.import.ts entity.name",
+        "source.tsx meta.import.tsx entity.name",
+        "source.js meta.import.js entity.name",
+        "source.jsx meta.import.jsx entity.name"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "TypeScript Type Annotations - Orange (similar to Python type hints)",
+      "scope": [
+        "meta.type.annotation.ts entity.name.type",
+        "meta.type.annotation.tsx entity.name.type",
+        "meta.type.annotation.ts support.type",
+        "meta.type.annotation.tsx support.type",
+        "meta.type.parameters.ts entity.name.type",
+        "meta.type.parameters.tsx entity.name.type",
+        "meta.type.parameters.ts support.type",
+        "meta.type.parameters.tsx support.type",
+        "source.ts meta.type.annotation entity.name.type",
+        "source.tsx meta.type.annotation entity.name.type",
+        "source.ts meta.type.annotation support.type",
+        "source.tsx meta.type.annotation support.type"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
       "name": "Markdown Heading - Blue",
       "scope": [
         "markup.heading"
@@ -430,6 +520,30 @@
         "meta.import.python source.python",
         "meta.import.python meta.member.access.python source.python",
         "source.python meta.import.python meta.member.access.python"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "TypeScript/JavaScript Submodules in Imports - Orange (override source for imports, exclude punctuation)",
+      "scope": [
+        "meta.import.ts meta.member.access.ts",
+        "meta.import.tsx meta.member.access.tsx",
+        "meta.import.js meta.member.access.js",
+        "meta.import.jsx meta.member.access.jsx",
+        "source.ts meta.import.ts",
+        "source.tsx meta.import.tsx",
+        "source.js meta.import.js",
+        "source.jsx meta.import.jsx",
+        "meta.import.ts source.ts",
+        "meta.import.tsx source.tsx",
+        "meta.import.js source.js",
+        "meta.import.jsx source.jsx",
+        "meta.import.ts meta.member.access.ts source.ts",
+        "meta.import.tsx meta.member.access.tsx source.tsx",
+        "source.ts meta.import.ts meta.member.access.ts",
+        "source.tsx meta.import.tsx meta.member.access.tsx"
       ],
       "settings": {
         "foreground": "#d19a66"

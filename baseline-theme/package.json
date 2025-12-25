@@ -2,7 +2,7 @@
   "name": "baseline-theme",
   "displayName": "Baseline Theme",
   "description": "VS Code theme based on Obsidian Baseline theme - sleek, minimal, and customizable with dark and light variants",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "xRiskLab",
   "icon": "icon.png",
   "engines": {

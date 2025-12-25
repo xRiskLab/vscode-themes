@@ -1,6 +1,8 @@
+import sys
+
 from loguru import logger
 from rich.logging import RichHandler
-import sys
+
 
 def setup_logger(level: str = "INFO", var=50):
     """Set up a logger with RichHandler for better formatting and color support."""
@@ -10,5 +12,6 @@ def setup_logger(level: str = "INFO", var=50):
         handlers=[{"sink": RichHandler(), "format": "{message}", "level": level}]
     )
     return logger
+
 
 setup_logger()
