@@ -1,0 +1,25 @@
+name: Baseline Light
+accent: '#528bff'
+cursor: '#528bff'
+background: '#ffffff'
+foreground: '#383a42'
+details: lighter
+terminal_colors:
+  normal:
+    black: '#383a42'
+    red: '#e16d76'
+    green: '#72c45a'
+    yellow: '#d19a66'
+    blue: '#528bff'
+    magenta: '#c678de'
+    cyan: '#58b6c2'
+    white: '#f8f9fa'
+  bright:
+    black: '#b6b9c5'
+    red: '#f07580'
+    green: '#5ab049'
+    yellow: '#c08040'
+    blue: '#3a6fd8'
+    magenta: '#a855c4'
+    cyan: '#3fa8b6'
+    white: '#ffffff'

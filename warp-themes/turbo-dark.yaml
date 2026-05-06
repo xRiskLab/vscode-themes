@@ -1,0 +1,25 @@
+name: Turbo Dark
+accent: '#10a37f'
+cursor: '#10a37f'
+background: '#1a1f2e'
+foreground: '#e8eaed'
+details: darker
+terminal_colors:
+  normal:
+    black: '#222836'
+    red: '#e16d76'
+    green: '#10a37f'
+    yellow: '#d4a574'
+    blue: '#519BD9'
+    magenta: '#C98A8E'
+    cyan: '#14b8a6'
+    white: '#e8eaed'
+  bright:
+    black: '#5a6578'
+    red: '#f08088'
+    green: '#14c998'
+    yellow: '#e8bb8a'
+    blue: '#70b3e8'
+    magenta: '#dca8ac'
+    cyan: '#3fcfbc'
+    white: '#ffffff'

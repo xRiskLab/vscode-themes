@@ -1,0 +1,25 @@
+name: Baseline Dark
+accent: '#528bff'
+cursor: '#528bff'
+background: '#1e1e1e'
+foreground: '#abb2bf'
+details: darker
+terminal_colors:
+  normal:
+    black: '#282c34'
+    red: '#e16d76'
+    green: '#72c45a'
+    yellow: '#d19a66'
+    blue: '#528bff'
+    magenta: '#c678de'
+    cyan: '#58b6c2'
+    white: '#abb2bf'
+  bright:
+    black: '#5c6370'
+    red: '#f07580'
+    green: '#98d982'
+    yellow: '#e5be8d'
+    blue: '#7aa4ff'
+    magenta: '#d990f0'
+    cyan: '#7ed0da'
+    white: '#ffffff'

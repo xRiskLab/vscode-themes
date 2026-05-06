@@ -1,0 +1,25 @@
+name: Turbo Light
+accent: '#0a7c72'
+cursor: '#0a7c72'
+background: '#fafbfc'
+foreground: '#1a202c'
+details: lighter
+terminal_colors:
+  normal:
+    black: '#1a202c'
+    red: '#d63948'
+    green: '#0a7c72'
+    yellow: '#b8845a'
+    blue: '#2563A8'
+    magenta: '#A64D79'
+    cyan: '#0f9b8e'
+    white: '#f1f5f9'
+  bright:
+    black: '#64748b'
+    red: '#e84d5a'
+    green: '#0e9f93'
+    yellow: '#c49568'
+    blue: '#3378c8'
+    magenta: '#c05e8a'
+    cyan: '#17b0a2'
+    white: '#ffffff'
